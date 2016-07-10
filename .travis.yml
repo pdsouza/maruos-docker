@@ -5,7 +5,6 @@ services:
 
 before_install:
     - docker build -t maruos .
-    - docker ps -a
 
 script:
     - docker run maruos /bin/sh -c "ls -al && dpkg -l"
