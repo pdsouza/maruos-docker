@@ -4,4 +4,4 @@
 
 Core build dependencies for Maru OS.
 
-`docker pull pdsouza/maruos`
+    $ docker pull pdsouza/maruos
