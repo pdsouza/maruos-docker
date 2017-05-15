@@ -4,7 +4,7 @@ FROM ubuntu:14.04
 MAINTAINER Preetam D'Souza <preetamjdsouza@gmail.com>
 
 # AOSP dependencies https://source.android.com/source/initializing.html
-RUN apt-get -y update && apt-get install -y \
+RUN apt-get update && apt-get install -y \
     git-core \
     gnupg \
     flex \
@@ -28,6 +28,10 @@ RUN apt-get -y update && apt-get install -y \
     unzip \
     python
 
+# kernel building dependencies
+RUN apt-get install -y \
+    bc
+
 # workaround for OpenJDK8 on 14.04
 RUN apt-get install -y wget \
 && wget http://archive.ubuntu.com/ubuntu/pool/universe/o/openjdk-8/openjdk-8-jre-headless_8u45-b14-1_amd64.deb \
@@ -40,7 +44,7 @@ RUN apt-get install -y wget \
 && dpkg -i *.deb ; apt-get -f install -y
 
 # desktop image building dependencies
-RUN apt-get update && apt-get install -y \
+RUN apt-get install -y \
     binfmt-support \
     debootstrap \
     debian-archive-keyring \
@@ -51,7 +55,7 @@ RUN apt-get update && apt-get install -y \
     qemu-user-static
 
 # LXC dependencies
-RUN apt-get -y update && apt-get install -y \
+RUN apt-get install -y \
     automake \
     pkg-config \
 && apt-get clean \
