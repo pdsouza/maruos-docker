@@ -1,17 +1,17 @@
 # Base Docker Image for Maru OS Development
 
 [![Build Status](https://travis-ci.org/pdsouza/maruos-docker.svg?branch=master)](https://travis-ci.org/pdsouza/maruos-docker)
+[![Docker Pulls](https://img.shields.io/docker/pulls/pdsouza/maruos.svg)](https://hub.docker.com/r/pdsouza/maruos/)
 
 Core build dependencies for Maru OS.
 
     $ docker pull pdsouza/maruos
 
-### Contributing
+## Contributing
 
 See the [main Maru OS repository](https://github.com/maruos/maruos) for more
 info.
 
-### Licensing
+## Licensing
 
-This repository is licensed under the Apache License, Version 2.0. See
-[LICENSE](LICENSE) for the details.
+[Apache 2.0](LICENSE)
