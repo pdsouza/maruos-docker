@@ -1,8 +1,6 @@
 # AOSP recommends 14.04
 FROM ubuntu:14.04
 
-MAINTAINER Preetam D'Souza <preetamjdsouza@gmail.com>
-
 # AOSP dependencies https://source.android.com/source/initializing.html
 RUN apt-get update && apt-get install -y \
     git-core \
