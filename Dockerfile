@@ -34,6 +34,10 @@ RUN apt-get -q -y install \
 RUN apt-get -q -y install \
     bc
 
+# Google Pixel (sailfish) dependencies
+RUN apt-get -q -y install \
+    bsdmainutils # hexdump is required for generating OTA
+
 # desktop image building dependencies
 RUN apt-get -q -y install \
     binfmt-support \
