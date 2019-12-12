@@ -14,7 +14,7 @@ RUN apt-get update && apt-get -q -y install \
     gcc-multilib \
     g++-multilib \
     libc6-dev-i386 \
-    lib32ncurses5-dev \
+    libncurses5 \
     x11proto-core-dev \
     libx11-dev \
     lib32z-dev \
