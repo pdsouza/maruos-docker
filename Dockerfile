@@ -1,4 +1,4 @@
-FROM debian:stretch
+FROM debian:buster
 
 # AOSP dependencies https://source.android.com/source/initializing.html
 RUN apt-get update && apt-get -q -y install \
@@ -24,7 +24,14 @@ RUN apt-get update && apt-get -q -y install \
     xsltproc \
     unzip \
     python \
-    openjdk-8-jdk
+    openjdk-11-jdk
+
+# OpenJDK 8 is not available in buster so install from AOSP
+# Based on https://android.googlesource.com/platform/build/+/master/tools/docker/Dockerfile
+RUN curl -o jdk8.tgz https://android.googlesource.com/platform/prebuilts/jdk/jdk8/+archive/master.tar.gz \
+ && tar -zxf jdk8.tgz linux-x86 \
+ && mv linux-x86 /usr/lib/jvm/java-8-openjdk-amd64 \
+ && rm -rf jdk8.tgz
 
 # missing dependencies in base image
 RUN apt-get -q -y install \
