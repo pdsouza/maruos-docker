@@ -19,6 +19,7 @@ RUN apt-get update && apt-get -q -y install \
     libx11-dev \
     lib32z-dev \
     liblz4-tool \
+    libssl-dev \
     ccache \
     libgl1-mesa-dev \
     libxml2-utils \
