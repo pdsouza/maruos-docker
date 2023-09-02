@@ -8,6 +8,7 @@ RUN apt-get update && apt-get -q -y install \
     bison \
     gperf \
     build-essential \
+    kmod \
     zip \
     curl \
     zlib1g-dev \
@@ -18,6 +19,8 @@ RUN apt-get update && apt-get -q -y install \
     x11proto-core-dev \
     libx11-dev \
     lib32z-dev \
+    liblz4-tool \
+    libssl-dev \
     ccache \
     libgl1-mesa-dev \
     libxml2-utils \
