@@ -8,6 +8,7 @@ RUN apt-get update && apt-get -q -y install \
     bison \
     gperf \
     build-essential \
+    kmod \
     zip \
     curl \
     zlib1g-dev \
