@@ -18,6 +18,7 @@ RUN apt-get update && apt-get -q -y install \
     x11proto-core-dev \
     libx11-dev \
     lib32z-dev \
+    liblz4-tool \
     ccache \
     libgl1-mesa-dev \
     libxml2-utils \
